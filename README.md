@@ -49,6 +49,28 @@ A Django REST API for managing recipes, meal plans, and shopping lists.
    python manage.py runserver
    ```
 
+## Development
+
+### Code Style
+- Follow PEP 8 guidelines
+- Use meaningful variable and function names
+- Add docstrings to functions and classes
+
+### Contributing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+### Environment Variables
+Create a `.env` file in the root directory with the following variables:
+```env
+SECRET_KEY=your-secret-key-here
+DEBUG=True
+ALLOWED_HOSTS=localhost,127.0.0.1
+```
+
 ## API Endpoints
 
 ### Authentication
@@ -88,5 +110,20 @@ Run tests with:
 ```bash
 python manage.py test
 ```
+
+The test suite includes:
+- User authentication tests
+- Recipe CRUD operation tests
+- Permission tests
+- API endpoint tests
+- Model validation tests
+
+For test coverage report, install coverage:
+```bash
+pip install coverage
+coverage run manage.py test
+coverage report
+```
+
 ## License
-[Add your chosen license]
+MIT License - See [LICENSE](LICENSE) file for details
